@@ -1,5 +1,64 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
 .form-container {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100vh;
+    background: url('./../../assets/login-img/classic.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.form {
+    width: 420px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    padding: 40px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0 0 10px rgba(0, 0, 0 ,.2);
+}
+.form-header {
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+}
+.form-body {
+    input, button {
+        width: 100%;
+        height:100%;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, .2);
+        outline: none;
+        border-radius: 20px;
+        padding: 10px 30px 10px 10px;
+    }
+    input::placeholder {
+        color: #fff;
+    }
+    button {
+        cursor: pointer;
+        background-color: bisque;
+        color: #000;
+    }
+    button:hover {
+        background-color: transparent;
+        color: #fff;
+    }
+    .form-input {
+        position: relative;
+        margin: 25px 0;
+    }
+    .form-input i {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(50%);
+    }
 }
