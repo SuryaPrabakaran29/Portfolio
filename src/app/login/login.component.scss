@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: url('./../../assets/login-img/classic.jpg');
+    background: url('./../../assets/login-img/login-bg-img.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -20,7 +20,7 @@
     color: #fff;
     padding: 40px 20px;
     border-radius: 10px;
-    backdrop-filter: blur(40px);
+    backdrop-filter: blur(10px);
     box-shadow: 0 0 10px rgba(0, 0, 0 ,.2);
 }
 .form-header {
@@ -38,18 +38,24 @@
         outline: none;
         border-radius: 20px;
         padding: 10px 30px 10px 10px;
+        color: #fff;
     }
     input::placeholder {
-        color: #fff;
+        color: inherit;
     }
     button {
         cursor: pointer;
-        background-color: bisque;
-        color: #000;
-    }
-    button:hover {
-        background-color: transparent;
+        transition: 0.5s;
+        background-image: linear-gradient(to right, #C04848 0%, #480048  51%, #C04848  100%);
         color: #fff;
+        box-shadow: 0 0 2px #eee;
+        background-size: 1000px auto;
+        text-transform: uppercase;
+    }
+    
+    button:hover {
+        background-position: right center;
+        color: #000;
     }
     .form-input {
         position: relative;
@@ -59,6 +65,7 @@
         position: absolute;
         top: 50%;
         right: 20px;
-        transform: translateY(50%);
+        transform: translateY(30%);
     }
 }
+
