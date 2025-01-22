@@ -17,16 +17,21 @@
     width: 420px;
     background-color: transparent;
     border: 2px solid rgba(255, 255, 255, .2);
-    color: #fff;
-    padding: 40px 20px;
+    color: var(--font-white);
+    padding: 40px 45px;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(50px);
     box-shadow: 0 0 10px rgba(0, 0, 0 ,.2);
 }
 .form-header {
     h1 {
         font-size: 36px;
         text-align: center;
+    }
+    span {
+        text-decoration: underline;
+        text-underline-offset: 8px; 
+        text-decoration-thickness: 4px; 
     }
 }
 .form-body {
@@ -38,7 +43,7 @@
         outline: none;
         border-radius: 20px;
         padding: 10px 30px 10px 10px;
-        color: #fff;
+        color: var(--font-white);
     }
     input::placeholder {
         color: inherit;
@@ -46,16 +51,15 @@
     button {
         cursor: pointer;
         transition: 0.5s;
-        background-image: linear-gradient(to right, #C04848 0%, #480048  51%, #C04848  100%);
-        color: #fff;
-        box-shadow: 0 0 2px #eee;
+        background-image: linear-gradient(to right, #C04848 0%, #000  51%, #C04848  100%);
+        color: var(--font-white);
+        box-shadow: 0 0 2px var(--font-white);
         background-size: 1000px auto;
         text-transform: uppercase;
     }
     
     button:hover {
         background-position: right center;
-        color: #000;
     }
     .form-input {
         position: relative;
@@ -67,5 +71,12 @@
         right: 20px;
         transform: translateY(30%);
     }
+}
+.form-footer {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    font-size: 24px;
+    cursor: pointer;
 }
 
