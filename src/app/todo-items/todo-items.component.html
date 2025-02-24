@@ -1,0 +1,20 @@
+<div class="todo-list-container">
+    <div class="todo-input-section">
+        <div class="title">
+            <h1>Todo-App</h1>
+        </div>
+        <div class="add-section">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter Courses</mat-label>
+                <input matInput placeholder="Course name" [(ngModel)]="courseName" />
+            </mat-form-field>
+
+            <button mat-icon-button (click)="addCourse('1')">
+                <mat-icon>add</mat-icon>
+            </button>
+        </div>
+    </div>
+</div>
+<div class="todo-list">
+    <app-todo-list [parentData]="sendDataToStore"></app-todo-list>
+</div>
