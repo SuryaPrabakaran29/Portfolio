@@ -18,12 +18,16 @@ export class TodoListComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['parentData'] && this.parentData) {
-      this.dataSource.push({
-        sno: this.dataSource.length + 1, 
-        course: this.parentData
-      });
+      this.dataSource = [
+        ...this.dataSource,
+        {
+          sno: this.dataSource.length + 1,
+          course: this.parentData
+        }
+      ];
     }
   }
+  
 
 
   deleteCourse(index: number) {
